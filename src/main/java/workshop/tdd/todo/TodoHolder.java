@@ -10,6 +10,10 @@ public class TodoHolder {
         todoList = new ArrayList<>();
     }
 
+    public TodoHolder(List<String> todos) {
+        todoList = todos;
+    }
+
     /**
      * Add a To-do to the list
      * @param todo Todo to add
