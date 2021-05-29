@@ -140,13 +140,13 @@
                 <configuration>
                     <targetClasses>
                         <param>
-                            com.example.logic.*
+                            workshop.tdd.todo.*
                         </param>
                     </targetClasses>
                     <!-- Tests to run -->
                     <targetTests>
                         <param>
-                            com.example.*
+                            workshop.tdd.todo.*
                         </param>
                     </targetTests>
                     <outputFormats>
