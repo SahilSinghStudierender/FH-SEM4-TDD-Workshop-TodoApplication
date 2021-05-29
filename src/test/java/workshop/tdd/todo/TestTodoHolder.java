@@ -43,4 +43,40 @@ class TestTodoHolder {
                 () -> assertEquals(newTodo, holder.todoList.get(holder.todoList.size() - 1))
         );
     }
+
+    @Test
+    void ensureAddingEmptyTodoWillReturnFalse() {
+        // Arrange
+        TodoHolder holder = new TodoHolder();
+
+        // Act
+        boolean result = holder.addTodo("");
+
+        // Assert
+        assertFalse(result);
+    }
+
+    @Test
+    void ensureAddingNullTodoWillReturnFalse() {
+        // Arrange
+        TodoHolder holder = new TodoHolder();
+
+        // Act
+        boolean result = holder.addTodo(null);
+
+        // Assert
+        assertFalse(result);
+    }
+
+    @Test
+    void ensureAddingBlankTodoWillReturnFalse() {
+        // Arrange
+        TodoHolder holder = new TodoHolder();
+
+        // Act
+        boolean result = holder.addTodo("   ");
+
+        // Assert
+        assertFalse(result);
+    }
 }
