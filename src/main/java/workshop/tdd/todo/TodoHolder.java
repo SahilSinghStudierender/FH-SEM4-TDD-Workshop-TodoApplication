@@ -20,9 +20,17 @@ public class TodoHolder {
      * @return true if successfully added, false if there was an error
      */
     public boolean addTodo(String todo) {
-        if(todo == null || todo.trim().isEmpty()) return false;
+        if (todo == null || todo.trim().isEmpty()) return false;
 
-        todoList.add(todo);
-        return true;
+        boolean isOkay = true;
+        for (String item : todoList) {
+            if (item.equals(todo)) {
+                isOkay = false;
+                break;
+            }
+        }
+
+        if (isOkay) todoList.add(todo);
+        return isOkay;
     }
 }

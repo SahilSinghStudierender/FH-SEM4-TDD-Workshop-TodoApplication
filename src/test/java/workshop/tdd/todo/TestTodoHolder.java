@@ -79,4 +79,18 @@ class TestTodoHolder {
         // Assert
         assertFalse(result);
     }
+
+    @Test
+    void ensureAddingAnAlreadyAddedTodoWillReturnFalse() {
+        // Arrange
+        TodoHolder holder = new TodoHolder();
+
+        // Act
+        String toAdd = "Clean Desk";
+        holder.addTodo(toAdd);
+        boolean result = holder.addTodo(toAdd);
+
+        // Assert
+        assertFalse(result);
+    }
 }
